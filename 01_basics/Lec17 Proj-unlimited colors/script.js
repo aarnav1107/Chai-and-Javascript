@@ -11,13 +11,18 @@ const randomColor = function () {
   
   let intervalId;
   const startChangingColor = function () {
-    if (!intervalId) { // if intervalId is null
-      intervalId = setInterval(changeBgColor, 1000); //
-    }
-  
-    function changeBgColor() {
+    // if (!intervalId) { // if intervalId is null
+    //   intervalId = setInterval(changeBgColor, 1000); // 
+    // }
+    intervalId = setInterval(function()
+    {
       document.body.style.backgroundColor = randomColor();
-    }
+    
+    }, 1000);
+  
+    // function changeBgColor() {
+    //   document.body.style.backgroundColor = randomColor();
+    // }
   };
   const stopChangingColor = function () {
     clearInterval(intervalId);
