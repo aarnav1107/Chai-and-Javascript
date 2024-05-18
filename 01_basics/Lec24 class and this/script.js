@@ -5,7 +5,7 @@ function SetUsername(username){
 }
 
 function createUser(username, email, password){
-    SetUsername.call(this, username)
+    SetUsername.call(this,username)
    
     this.email = email
     this.password = password
@@ -13,3 +13,4 @@ function createUser(username, email, password){
 
 const chai = new createUser("chai", "chai@fb.com", "123")
 console.log(chai);
+console.log(chai.username);

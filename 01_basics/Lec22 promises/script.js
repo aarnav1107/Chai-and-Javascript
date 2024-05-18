@@ -65,56 +65,56 @@
 
 //in this password is also printed
 
-const promiseFour = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        let error = false;
-        if (!error) {
-            resolve({username: "hitesh", password: "123"});
-        } else {
-            reject('ERROR: Something went wrong');
-        }
-    }, 1000);
-});
+// const promiseFour = new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//         let error = true;
+//         if (!error) {
+//             resolve({username: "hitesh", password: "123"});
+//         } else {
+//             reject('ERROR: Something went wrong');
+//         }
+//     }, 1000);
+// });
 
-promiseFour
-    .then((user) => {
-        console.log(user);
-        console.log(user.username);
-        console.log(user.password);
-    })
-    .catch(function(error){
-        console.log(error);
-    })
-    .finally(() => console.log("The promise is either resolved or rejected"));
+// promiseFour
+//     .then((user) => {
+//        console.log(user);
+//        console.log(user.username);
+//         console.log(user.password);
+//     })
+//     .catch(function(error){
+//         console.log(error);
+//     })
+//     .finally(() => console.log("The promise is either resolved or rejected"));
 
 //another way to write the above code
-    // const promiseFour = new Promise(function(resolve, reject){
-    //     setTimeout(function(){
-    //         let error = false;
-    //         if (!error) {
-    //             resolve({username: "hitesh", password: "123"});
-    //         } else {
-    //             reject('ERROR: Something went wrong');
-    //         }
-    //     }, 1000);
-    // });
+    const promiseFour = new Promise(function(resolve, reject){
+        setTimeout(function(){
+            let error = false;
+            if (!error) {
+                resolve({username: "hitesh", password: "123"});
+            } else {
+                reject('ERROR: Something went wrong');
+            }
+        }, 1000);
+    });
     
-    // promiseFour
-    //     .then((user) => {
-    //         console.log(user);
-    //         return user;
-    //     })
-    //     .then((user) => {
-    //         console.log(user.username);
-    //         return user;
-    //     })
-    //     .then((user) => {
-    //         console.log(user.password);
-    //     })
-    //     .catch(function(error){
-    //         console.log(error);
-    //     })
-    //     .finally(() => console.log("The promise is either resolved or rejected"));
+    promiseFour
+        .then((user) => {
+            console.log(user);
+            return user;
+        })
+        .then((user) => {
+            console.log(user.username);
+            return user;
+        })
+        .then((user) => {
+            console.log(user.password);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+        .finally(() => console.log("The promise is either resolved or rejected"));
     
 
 

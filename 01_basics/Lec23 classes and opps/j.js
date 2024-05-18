@@ -4,17 +4,19 @@ const user = {
     signedIn: true,
 
     getUserDetails: function(){
-        //console.log("Got user details from database");
-        // console.log(`Username: ${this.username}`);
-        console.log(this);
+        console.log("Got user details from database");
+        console.log(`Username: ${this.username}`);
+        //console.log(this);
     }
 
 }
-console.log(user.username);
-console.log(user.getUserDetails());
-
+//console.log(user.username);
+// console.log(user.getUserDetails());
+// console.log(user.username);
+// user.getUserDetails();
 user.getUserDetails();
-
+console.log(user.getUserDetails());
+console.log(user.username);
 
 
 
@@ -44,18 +46,37 @@ function User(username, loginCount, isLoggedIn){
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
 
-    this.greeting = function(){
+
+
+    // this.greeting = function(){
+    User.prototype.greeting = function(){
+    
+
         console.log(`Welcome ${this.username}`);
 
     }
-
-    return this
 }
+
+    //return this
+
 
 const userOne = new User("hitesh", 12, true)
 const userTwo = new User("ChaiAurCode", 11, false)
 console.log(userOne.username);
-console.log(userTwo.username);
+console.log(userTwo);
+console.log(userOne);
+userOne.greeting();
+
+ 
+//console.log(userOne.greeting());//undefined
+//userOne.greeting(); ///undefined
+// console.log(userOne.username);
+// console.log(userTwo.username);
+// console.log(userOne.greeting());//undefined
+// console.log(userTwo.greeting());//undefined
+// console.log(userOne);
+// //console.log(user.greeting());//undefined 
+// userOne.greeting();
 
 
 
@@ -65,9 +86,9 @@ function createUser(username, score){
     this.score = score
 }
 
-// createUser.prototype.increment = function(){
-//     this.score++
-// }
+createUser.prototype.increment = function(){
+    this.score++
+}
 createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
@@ -76,5 +97,3 @@ const chai = new createUser("chai", 25)
 const tea = new createUser("tea", 250)
 console.log(chai);
 console.log(tea);
-
-chai.printMe()
