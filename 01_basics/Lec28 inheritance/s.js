@@ -28,12 +28,17 @@ const masalaChai = new User("masalaChai")
 
 masalaChai.logMe()
 
-console.log(chai instanceof Teacher);
+console.log(chai instanceof Teacher);//true
+console.log(chai instanceof User);//true
+console.log(masalaChai instanceof User)//true
+console.log(masalaChai instanceof Teacher);//false
+//console.log(masalaChai instanceof logMe);// logMe is not a class or not defined
+//console.log(masalaChai instanceof chai);//error
+//console.log(chai instanceof masalaChai);//error
 
 
 
-
-//Now us of STATIC keyword
+//Now use of STATIC keyword
 // class User {
 //     constructor(username){
 //         this.username = username
@@ -59,4 +64,9 @@ console.log(chai instanceof Teacher);
 // }
 
 // const iphone = new Teacher("iphone", "i@phone.com")
-// console.log(iphone.createId());
+// //console.log(iphone.createId());
+// console.log(User.createId());// 123
+// console.log(Teacher.createId());// 123
+// //console.log(hitesh.createId()); // error
+// console.log(hitesh.logMe());//
+// console.log(iphone.logMe());
