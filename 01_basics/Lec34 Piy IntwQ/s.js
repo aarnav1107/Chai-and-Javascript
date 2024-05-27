@@ -19,4 +19,40 @@ for(var i=0; i<6; i++){
     })(i)
 }
 
+myFun();
 
+var myFun=function(){
+    console.log('Hello');
+}
+myFun();
+// function declaration hoisted
+function myFun(){
+    console.log('Hello22');
+}
+myFun();
+
+// Path: Lec34%20Piy%20IntwQ/s.js
+var variable=10;
+(() => {
+    console.log(variable);
+    var variable=20;
+    console.log(variable);
+})();
+console.log(variable);
+var variable=30;
+
+
+// without IIFE
+var variable = 10;
+
+function test() {
+    console.log(variable);
+    var variable = 20;
+    console.log(variable);
+}
+
+test();
+
+console.log(variable);
+
+var variable = 30;
