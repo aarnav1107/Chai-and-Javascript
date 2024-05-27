@@ -52,3 +52,25 @@ console.log(addTwo(3, 4))
 // const myArray = [2, 5, 3, 7, 8]
 
 // myArray.forEach()
+
+let arr= [1,2,3,4,5,6,7,8,9,10]
+
+//write for loop
+for(let i=0; i<arr.length; i++){
+    console.log(arr[i])
+
+}
+//write same code using while loop
+let i=0
+while(i<arr.length){
+    console.log(arr[i])
+    i++
+}
+//print table from 1 to 5
+for(let i=1; i<=5; i++){
+    for(let j=1; j<=10; j++){
+        // console.log([i],"*",[j],"=" ,i*j)
+        console.log(`${i} * ${j} = ${i*j}`);
+        
+    }
+}
