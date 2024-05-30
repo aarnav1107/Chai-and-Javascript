@@ -34,9 +34,9 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // coding.forEach(printMe)
 
-// coding.forEach( (item, index, arr)=> {
-//     console.log(item, index, arr);
-// } )
+coding.forEach( (item, index, array)=> {
+    console.log(item, index, array);
+} )
 
 const myCoding = [
     {
@@ -57,3 +57,15 @@ myCoding.forEach( (item) => {
     
     console.log(item.languageName);
 } )
+
+
+// Maps
+
+const map = new Map()
+map.set('IN', "India")
+map.set('USA', "United States of America")
+map.set('Fr', "France")
+map.set('IN', "India")
+for(const [key,value]  in map){
+    console.log(key, value);
+}
