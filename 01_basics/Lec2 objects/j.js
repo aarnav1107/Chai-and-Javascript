@@ -47,12 +47,15 @@ JsUser.greeting = function(){
 JsUser.greetingTwo = function(){
     console.log(`Hello JS user, ${this.name}`);
 }
-JsUser.greeting();//
-
-console.log();
-
-// console.log(JsUser.greeting());
+console.log(JsUser.greeting());
 console.log(JsUser.greetingTwo());
+// JsUser.greeting();
+
+
+
+// // console.log(JsUser.greeting());
+// console.log(JsUser.greetingTwo());
+// JsUser.greetingTwo();
 
 
 
